@@ -25,6 +25,9 @@ const ret = convert(parseJevko(`
 [children] list []
 [spouse] null []
 [fred] fred []
+boolean [true] [test]
+number [5] [test2]
+[number [1] [t]] [test3]
 `), {
   uctx: new Map([['fred', jevko => 'FRED']]),
   top: 'map',
