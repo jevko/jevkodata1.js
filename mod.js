@@ -1,6 +1,9 @@
 import {stringToNumber} from 'https://cdn.jsdelivr.net/gh/djedr/stringToNumber@v0.1.0/mod.js'
 
-export const convert = (jevko, uctx = new Map()) => infer(prep(jevko), uctx)
+export const convert = (jevko, {
+  uctx = new Map(),
+  top = '',
+} = {}) => ctx.get(top)(prep(jevko), uctx)
 
 const prep = jevko => {
   const {subjevkos, suffix} = jevko
