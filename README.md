@@ -1,6 +1,6 @@
-# jevkodata1.js
+NOTE: this is a sketch
 
-(Work in progress)
+# jevkodata1.js
 
 Codename Jevko Data 1.
 
