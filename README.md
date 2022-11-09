@@ -4,30 +4,7 @@ NOTE: this is a sketch
 
 Codename Jevko Data 1.
 
-A Jevko format for data that encodes this:
-
-```js
-Map {
-  "first name" => "John",
-  "last name" => "Smith",
-  "is alive" => true,
-  "age" => 27,
-  "address" => Map {
-      "street address" => "21 2nd Street",
-      "city" => "New York",
-      "state" => "NY",
-      "postal code" => "10021-3100"
-    },
-  "phone numbers" => [ 
-    Map { "type" => "home", "number" => "212 555-1234" },
-    Map { "type" => "office", "number" => "646 555-4567" }
-  ],
-  "children" => [],
-  "spouse" => null
-}
-```
-
-as this:
+A Jevko format for data that decodes this:
 
 ```
 [first name] [John]
@@ -52,6 +29,29 @@ as this:
 ]
 [children] list []
 [spouse] null []
+```
+
+into this:
+
+```js
+Map {
+  "first name" => "John",
+  "last name" => "Smith",
+  "is alive" => true,
+  "age" => 27,
+  "address" => Map {
+      "street address" => "21 2nd Street",
+      "city" => "New York",
+      "state" => "NY",
+      "postal code" => "10021-3100"
+    },
+  "phone numbers" => [ 
+    Map { "type" => "home", "number" => "212 555-1234" },
+    Map { "type" => "office", "number" => "646 555-4567" }
+  ],
+  "children" => [],
+  "spouse" => null
+}
 ```
 
 i.e. prefixes determine the type of a value.
